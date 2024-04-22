@@ -72,31 +72,6 @@ void show()
 	}
 
 
-void search()
-	{
-		if(total==0)
-			{
-				cout<<"No data is entered"<<endl;
-			}	
-		else
-			{
-				string rollno;
-				cout<<"Enter the roll no of student"<<endl;
-				cin>>rollno;
-				for(int i=0;i<total;i++)
-					{
-						if(rollno==roll_no[i])
-							{
-							cout<<"Roll NO "<<roll_no[i]<<endl;
-							cout<<"Name "<<name[i]<<endl;
-							cout<<"Class "<<Class[i]<<endl;
-							cout<<"Course "<<course[i]<<endl;
-							cout<<"Mobile NO "<<mobile_no[i]<<endl;
-							cout<<"Admission Year "<<admission_year[i]<<endl;
-							}
-					}
-			}
-	}
 void update()
 	{
 		if(total==0)
@@ -170,10 +145,9 @@ int main()
 			{
 				cout<<"\nPress 1 to Enter data"<<endl<<endl;
 				cout<<"Press 2 to Show data"<<endl<<endl;
-				cout<<"Press 3 to Search data"<<endl<<endl;
-				cout<<"Press 4 to Update data"<<endl<<endl;
-				cout<<"Press 5 to Delete data"<<endl<<endl;
-				cout<<"Press 6 to Quit"<<endl<<endl;
+				cout<<"Press 3 to Update data"<<endl<<endl;
+				cout<<"Press 4 to Delete data"<<endl<<endl;
+				cout<<"Press 5 to Quit"<<endl<<endl;
 				cin>>value;
 				switch(value)
 					{
@@ -184,15 +158,12 @@ int main()
 						show();
 						break;
 						case 3:
-						search();
-						break;
-						case 4:
 						update();
 						break;
-						case 5:
+						case 4:
 						Delete();
 						break;
-						case 6:
+						case 5:
 						exit(0);
 						break;
 						default:
